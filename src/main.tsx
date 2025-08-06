@@ -5,10 +5,12 @@ import App from './App.tsx'
 // jsx
 
 const h1 = <h1 id="title">Hello React.js</h1>
+let a = 10
+let b = 'hello test'
 const list = (
     <ul>
-        <li>listitem1</li>
-        <li>listitem2</li>
+        <li>listitem1 {a + 10 + 10}</li>
+        <li>listitem2 {b}</li>
     </ul>
 )
 
