@@ -2,9 +2,16 @@ import { createElement, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+// jsx
 
-const h1 = createElement('h1', { id: 'title' }, 'Hello React')
-const list = createElement('ul', null, createElement('li', null, 'listitem'))
+const h1 = <h1 id="title">Hello React.js</h1>
+const list = (
+    <ul>
+        <li>listitem1</li>
+        <li>listitem2</li>
+    </ul>
+)
+
 const content = (
     <div>
         {h1}
@@ -13,5 +20,5 @@ const content = (
 )
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>{content}</StrictMode>
+    <StrictMode>{list}</StrictMode>
 )
