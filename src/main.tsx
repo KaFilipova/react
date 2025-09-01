@@ -1,32 +1,16 @@
 import { createElement, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import App from './App.tsx'
-
-// компоненты пишутся с большой буквы. компоненты вызываются как теги </>
-// props - это свойства, которые компонент принять на входе
-// названия интерфейса (interface) начинается с большой буквы I. interface это описание обьекта
+import Content from './Content'
 interface ITitleProps {
     text: string
 }
-type ContentProps = {
-    text1: string
-    text2: string
-    year: number
-}
+
 const Title = (props: ITitleProps) => {
     console.log(props)
     return <h1>Hello {props.text}</h1>
 }
-const Content = (props: ContentProps) => {
-    return (
-        <>
-            <p>{props.text1}</p>
-            <p>{props.text2}</p>
-            <div> year first = {props.year}</div>
-        </>
-    )
-}
+
 function App() {
     return (
         <>
