@@ -45,4 +45,3 @@ createRoot(document.getElementById('root')!).render(
         <App />
     </StrictMode>
 )
-// передать в контент рендер апп
