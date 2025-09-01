@@ -1,7 +1,7 @@
 import { createElement, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Content from './Content'
+import { Content } from './Content'
 interface ITitleProps {
     text: string
 }
