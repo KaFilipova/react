@@ -2,13 +2,9 @@ import { createElement, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { Content } from './Content'
+import Title from './title'
 interface ITitleProps {
     text: string
-}
-
-const Title = (props: ITitleProps) => {
-    console.log(props)
-    return <h1>Hello {props.text}</h1>
 }
 
 function App() {
@@ -17,8 +13,10 @@ function App() {
             <Title text="React" />
             <Title text="TS" />
             <Content
-                text1={'hello world1'}
-                text2={'hello  world 2'}
+                text1={
+                    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo esse consectetur debitis, porro aperiam eius odio molestias repudiandae ducimus laboriosam, nihil voluptates.'
+                }
+                text2={' Ipsum laborum beatae nihil ullam facilis in sunt!'}
                 year={2025}
             />
         </>
