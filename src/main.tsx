@@ -4,34 +4,39 @@ import './index.css'
 // import App from './App.tsx'
 
 // компоненты пишутся с большой буквы. компоненты вызываются как теги </>
-
-const Title = () => {
-    return <h1>Hello App.js</h1>
+// props - это свойства, которые компонент принять на входе
+// названия интерфейса (interface) начинается с большой буквы I. interface это описание обьекта
+interface ITitleProps {
+    text: string
 }
-const Content = () => {
+type ContentProps = {
+    text1: string
+    text2: string
+    year: number
+}
+const Title = (props: ITitleProps) => {
+    console.log(props)
+    return <h1>Hello {props.text}</h1>
+}
+const Content = (props: ContentProps) => {
     return (
         <>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                vel distinctio veniam odit quas suscipit veritatis
-                necessitatibus, impedit at, praesentium sapiente error dicta
-                blanditiis earum reprehenderit mollitia recusandae maxime
-                aliquid.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Blanditiis tempora fuga, quas laboriosam dolore cumque, sed
-                optio aspernatur impedit expedita officiis animi odio id maiores
-                ipsa, accusamus nesciunt quo! Quidem?
-            </p>
+            <p>{props.text1}</p>
+            <p>{props.text2}</p>
+            <div> year first = {props.year}</div>
         </>
     )
 }
 function App() {
     return (
         <>
-            <Title />
-            <Content />
+            <Title text="React" />
+            <Title text="TS" />
+            <Content
+                text1={'hello world1'}
+                text2={'hello  world 2'}
+                year={2025}
+            />
         </>
     )
 }
@@ -40,3 +45,4 @@ createRoot(document.getElementById('root')!).render(
         <App />
     </StrictMode>
 )
+// передать в контент рендер апп
