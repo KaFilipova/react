@@ -1,6 +1,7 @@
-import { Container, AppBar, Toolbar, Button, IconButton } from '@mui/material'
+import { Container, AppBar, Toolbar, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from '../../components/Logo/Logo'
+import Menu from '../../components/Menu/Menu'
 
 import './Header.scss'
 
@@ -21,7 +22,7 @@ const Header = (props: Props) => {
                         <MenuIcon />
                     </IconButton>
                     <Logo />
-                    <Button color="inherit">Login</Button>
+                    <Menu />
                 </Toolbar>
             </AppBar>
         </Container>
