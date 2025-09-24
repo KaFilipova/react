@@ -1,17 +1,15 @@
-import AppBar from '@mui/material/AppBar'
-
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
+import { Container, AppBar, Toolbar, Button, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import { Container } from '@mui/material'
+import Logo from '../../components/Logo/Logo'
+
+import './Header.scss'
+
 type Props = {}
 
 const Header = (props: Props) => {
     return (
         <Container>
-            <AppBar position="static">
+            <AppBar position="static" className="app-bar">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -22,13 +20,7 @@ const Header = (props: Props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1 }}
-                    >
-                        News
-                    </Typography>
+                    <Logo />
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
