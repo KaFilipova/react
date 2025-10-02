@@ -12,13 +12,34 @@ const ProductsList = (props: Props) => {
             </Typography>
             <Grid className="grid-container" container spacing={5}>
                 <Grid item xs={12} sm={6} md={4}>
-                    <ProductsListItem />
+                    {' '}
+                    <ProductsListItem
+                        title="iPhone 14 Pro"
+                        description="This is iPhone 14 Pro"
+                        type="phone"
+                        capacity="256"
+                        price={1200}
+                    />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <ProductsListItem />
+                    {' '}
+                    <ProductsListItem
+                        title="iPhone 14 Pro"
+                        description="This is iPhone 14 Pro"
+                        type="phone"
+                        capacity="256"
+                        price={1200}
+                    />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <ProductsListItem />
+                    {''}
+                    <ProductsListItem
+                        title="iPhone 14 Pro"
+                        description="This is iPhone 14 Pro"
+                        type="phone"
+                        capacity="256"
+                        price={1200}
+                    />
                 </Grid>
             </Grid>
         </>
