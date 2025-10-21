@@ -1,16 +1,18 @@
 import { Container, AppBar, Toolbar, IconButton } from '@mui/material'
+
 import MenuIcon from '@mui/icons-material/Menu'
-import Logo from '../../components/Logo/Logo'
-import Menu from '../../components/Menu/Menu'
+import Logo from '@/components/Logo/Logo'
+import Menu from '@/components/Menu/Menu'
 
 import './Header.scss'
+import CartHeader from '@/components/CartHeader/CartHeader'
 
 type Props = {}
 
 const Header = (props: Props) => {
     return (
-        <Container>
-            <AppBar position="static" className="app-bar">
+        <AppBar position="static" className="app-bar">
+            <Container>
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -23,9 +25,10 @@ const Header = (props: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
+                    <CartHeader />
                 </Toolbar>
-            </AppBar>
-        </Container>
+            </Container>
+        </AppBar>
     )
 }
 
